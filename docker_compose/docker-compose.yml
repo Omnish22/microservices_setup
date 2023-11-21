@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  app:
+    # MENTION WHERE DOCKER FILE EXIST, IN THIS CASE CURRENT DIRECTORY
+    build: .  
+    volumes:
+      # MIRROR LOCAL CWD TO CONTAINER'S /DJANGO DIRCTORY
+      - .:/django
+    ports:
+      - 8000:8000
+    image: app:django
+    container_name: django_container 
+    command: python3 manage.py runserver 0.0.0.0:8000
+    

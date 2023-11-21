@@ -1,0 +1,8 @@
+CREATE IMAGE FIRST
+-> docker-compose build
+
+CREATE DJANGO PROJECT THEN CREATE CONTAINER
+-> docker-compose run --rm app django-admin startproject core .
+
+START THE CONTAINER 
+-> docker-compose up
